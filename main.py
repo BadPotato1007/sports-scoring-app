@@ -1,7 +1,10 @@
-import flask
-import os
-from supabase import create_client, Client
-
-url: str = os.environ.get("SUPABASE_URL")
-key: str = os.environ.get("SUPABASE_KEY")
-supabase: Client = create_client(url, key)
+from flask import Flask,render_template
+app = Flask(__name__)
+@app.route("/")
+def Home():
+    return render_template("home_page.html")
+@app.route("/teams")
+def Teams():
+    return render_template("teams.html")
+if "__main__" == __name__:
+    app.run(debug=True)
