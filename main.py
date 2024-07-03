@@ -6,5 +6,8 @@ def Home():
 @app.route("/teams")
 def Teams():
     return render_template("teams.html")
+@app.route("/choose")
+def Choose():
+    return render_template("choose.html")
 if "__main__" == __name__:
     app.run(debug=True)
