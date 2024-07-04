@@ -10,4 +10,4 @@ def Teams():
 def Choose():
     return render_template("choose.html")
 if "__main__" == __name__:
-    app.run(debug=True)
+    app.run()
