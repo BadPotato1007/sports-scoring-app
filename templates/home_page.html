@@ -4,16 +4,175 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+        font-family: "Noto Sans", sans-serif;
+    }
+      .text-color{
+          color: #FF7D29;
+      }
+      .button-color{
+          background-color : #FFEEA9;
+      }
+      .background-color{
+          background-color: #FEFFD2;
+      }
+      .svg-color{
+          fill: #FF7D29;
+          margin-right: 1;
+      }
+  </style>
+
 </head>
 <body>
-    <button class="roun ded-xl bg-blue-100">h</button>
-  <div class="flex-col p-5  ">
-    <div class=" rounded-xl h-4/5 w-100  bg-green-200">
-        <button class="h-4/5">h</button>
+
+    <div class="text-center text-6xl p-5">CHOOSE SPORT</div>
+
+
+  <!--this is the first row-->
+  <div class="grid grid-cols-2 items-center p-1 ">
+    <!--this is the first div in the same row-->
+      <div class="items-center p-1 gap-x-4">
+        <div class="button-color flex items-center justify-between rounded-xl border-2 border-black min-h-32 p-5">
+          <div class="flex items-center justify-center w-1/3">
+            <svg class="stroke-1 hover:stroke-2" width="50" height="50" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--emojione-monotone" preserveAspectRatio="xMidYMid meet">
+              <path d="M48.279 42.588l1.252 1.254l-.947.949l-1.548-1.547a8.93 8.93 0 0 0-1.088.811l12.864 12.863c.301-.348.572-.709.811-1.088l-1.549-1.547l.951-.949l1.254 1.254c1.443-3.336.809-7.355-1.918-10.082s-6.746-3.36-10.082-1.918m1.252 3.152l.95-.949l1.897 1.899l-.947.95l-1.9-1.9m2.848 2.848l.951-.947l1.896 1.897l-.947.948l-1.9-1.898m4.748 4.746l-1.9-1.898l.95-.949l1.897 1.898l-.947.949" fill="#000000"></path>
+              <path d="M44.188 46.092l1.549 1.549l-.95.947l-1.254-1.254c-1.443 3.337-.81 7.357 1.917 10.083s6.746 3.359 10.083 1.916L54.28 58.08l.947-.95l1.549 1.548c.378-.238.74-.51 1.088-.811L44.998 45.003c-.3.348-.57.71-.81 1.089m10.091 10.09l-.949.948l-1.898-1.897l.947-.949l1.9 1.898m-2.847-2.848l-.95.949l-1.897-1.898l.947-.949l1.9 1.898m-2.848-2.848l-.951.949l-1.896-1.897l.947-.95l1.9 1.898" fill="#000000"></path>
+              <path d="M50.42 25.346c0-.506-.201-.992-.561-1.35l-2.066-2.068c-.01-.085-.027-.168-.028-.255a2.62 2.62 0 0 1 .769-1.906L62 6.299l-.109-.401a5.337 5.337 0 0 0-1.381-2.403a5.362 5.362 0 0 0-2.4-1.383L57.707 2l-13.47 13.471c-.572.572-1.394.801-2.188.713l-2.041-2.04a1.907 1.907 0 0 0-2.699 0L2.831 48.622c-.754.754-1.379 2.2-.077 4.808c.71 1.42 1.903 3.004 3.36 4.461c.964.963 4.328 4.109 7.145 4.109c1.07 0 1.745-.45 2.123-.828l34.477-34.477c.36-.358.561-.843.561-1.349m-5.17-8.863L57.008 4.725c.489.218.951.516 1.354.918c.402.402.698.864.916 1.353L47.521 18.754a4.021 4.021 0 0 0-1.049 1.833l-.033-.013l-3.011-3.012l-.013-.03a4.023 4.023 0 0 0 1.835-1.049M4.52 49.633l34.138-34.139l4.566 4.564L13.67 49.613c-.681.681-2.181 1.372-3.144 1.302c-1.395-.104-6.006-1.282-6.006-1.282m9.852 9.851s-1.178-4.61-1.281-6.009c-.071-.96.621-2.462 1.301-3.142c7.387-7.391 29.554-29.555 29.554-29.555l4.563 4.566l-34.137 34.14" fill="#000000"></path>
+            </svg>
+          </div>
+          <div class="text-center w-1/3 text-2xl font-semibold">
+            CRICKET
+          </div>
+          <div class="flex items-center justify-center w-1/3">
+            <svg class="stroke-1 hover:stroke-2" width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+              <g data-name="19-Arrow Right">
+                <path d="M16 0a16 16 0 1 0 16 16A16 16 0 0 0 16 0zm0 30a14 14 0 1 1 14-14 14 14 0 0 1-14 14z"/>
+                <path d="m26.71 15.29-7-7-1.42 1.42 5.3 5.29H5v2h18.59l-5.29 5.29 1.41 1.41 7-7a1 1 0 0 0 0-1.41z"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!--this is the second div in the same row-->
+      <div class="items-center p-5 gap-x-4">
+        <div class="button-color flex items-center justify-between rounded-xl border-2 border-black min-h-32 p-5">
+          <div class="flex items-center justify-center w-1/3">
+            <svg class="stroke-1 hover:stroke-2" height="50" width="50" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 420.00 420.00" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="2.52"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.8400000000000001"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#FFFFFF;" d="M295.529,77.523c-9.295,17.844-19.983,37.536-32.508,59.89c9.271,15.888,18.678,31.843,27.804,47.32 c3.011,5.107,6.012,10.196,8.999,15.267h72.841c8.404-13.483,15.459-24.919,21.84-35.4c-7.583-30.808-22.695-58.684-43.275-81.554 C332.659,80.757,313.972,78.903,295.529,77.523z"></path> <path style="fill:#FFFFFF;" d="M129.185,235.282c-3.017-5.118-6.012-10.201-9.005-15.282H47.337 c-8.418,13.506-15.474,24.942-21.841,35.401c7.582,30.807,22.693,58.682,43.271,81.552c18.577,2.29,37.266,4.145,55.704,5.524 c9.295-17.844,19.983-37.536,32.505-59.885C147.708,266.707,138.309,250.757,129.185,235.282z"></path> <path style="fill:#FFFFFF;" d="M47.337,200h72.84c2.989-5.076,5.994-10.171,9.007-15.282c9.123-15.473,18.527-31.422,27.795-47.305 c-12.52-22.346-23.21-42.04-32.508-59.89c-18.444,1.38-37.132,3.235-55.703,5.524c-20.578,22.87-35.689,50.745-43.272,81.553 C31.876,175.079,38.932,186.515,47.337,200z"></path> <path style="fill:#FFFFFF;" d="M278.248,352.594c-9.272-17.829-19.971-37.553-32.551-60.009c-23.715,0.336-47.676,0.336-71.393,0 c-12.575,22.448-23.275,42.175-32.551,60.009c8.79,14.805,16.87,28.735,24.552,42.325c14.033,3.315,28.659,5.078,43.69,5.078 c15.036,0,29.666-1.764,43.702-5.08C261.384,381.318,269.463,367.389,278.248,352.594z"></path> <path style="fill:#FFFFFF;" d="M372.663,220H299.82c-2.99,5.076-5.981,10.154-8.996,15.267 c-9.127,15.48-18.529,31.434-27.801,47.325c12.526,22.356,23.214,42.048,32.505,59.886c18.448-1.381,37.135-3.236,55.701-5.524 c20.58-22.87,35.691-50.745,43.274-81.553C388.126,244.924,381.07,233.488,372.663,220z"></path> <path style="fill:#FFFFFF;" d="M166.304,25.081c-7.682,13.591-15.762,27.521-24.552,42.325 c9.281,17.844,19.984,37.577,32.561,60.027c23.717-0.336,47.656-0.336,71.373,0c12.58-22.457,23.284-42.189,32.561-60.027 c-8.79-14.805-16.87-28.734-24.551-42.323c-14.037-3.317-28.667-5.08-43.702-5.08C194.963,20.003,180.337,21.766,166.304,25.081z"></path> <path style="fill:#000000;" d="M174.282,147.435c-9.301,15.941-18.723,31.929-27.869,47.441c-2.986,5.065-5.95,10.095-8.912,15.124 c2.962,5.03,5.925,10.06,8.912,15.124c9.146,15.512,18.568,31.5,27.869,47.441c23.737,0.339,47.7,0.339,71.435,0 c9.305-15.946,18.73-31.939,27.878-47.456c2.983-5.06,5.943-10.085,8.902-15.109c-2.959-5.024-5.919-10.049-8.902-15.109 c-9.149-15.517-18.574-31.51-27.878-47.456C221.981,147.096,198.019,147.096,174.282,147.435z"></path> <path style="fill:#000000;" d="M138.073,34.155c-16.157,6.633-31.207,15.423-44.783,26.022c10.405-1.044,20.795-1.949,31.106-2.708 C129.15,49.464,133.691,41.723,138.073,34.155z"></path> <path style="fill:#000000;" d="M399.396,194.86c-2.951,4.774-6.068,9.794-9.399,15.14c3.331,5.346,6.448,10.367,9.399,15.14 c0.396-4.995,0.603-10.042,0.603-15.137C400,204.906,399.792,199.857,399.396,194.86z"></path> <path style="fill:#000000;" d="M281.929,385.842c16.155-6.632,31.203-15.421,44.778-26.019 c-10.403,1.043-20.791,1.949-31.103,2.707C290.853,370.533,286.312,378.272,281.929,385.842z"></path> <path style="fill:#000000;" d="M295.604,57.469c10.309,0.759,20.697,1.664,31.101,2.708 c-13.574-10.597-28.622-19.386-44.776-26.018C286.311,41.725,290.851,49.465,295.604,57.469z"></path> <path style="fill:#000000;" d="M20.603,225.141c2.95-4.771,6.067-9.792,9.4-15.141c-3.331-5.346-6.448-10.367-9.399-15.14 C20.208,199.857,20,204.906,20,210.002C20,215.098,20.208,220.145,20.603,225.141z"></path> <path style="fill:#000000;" d="M124.396,362.532c-10.31-0.759-20.7-1.665-31.107-2.709c13.577,10.6,28.627,19.39,44.785,26.023 C133.691,378.278,129.15,370.537,124.396,362.532z"></path> <path d="M415.042,164.6c-0.053-0.31-0.12-0.617-0.201-0.921c-8.236-36.438-25.973-69.31-50.461-95.875 c-0.513-0.722-1.119-1.375-1.806-1.94c-26.54-28.077-60.721-48.855-99.182-58.973c-0.391-0.129-0.788-0.238-1.192-0.317 c-16.697-4.287-34.189-6.57-52.205-6.57c-17.992,0-35.461,2.278-52.138,6.554c-0.426,0.082-0.844,0.197-1.256,0.333 c-38.46,10.119-72.64,30.897-99.179,58.975c-0.687,0.565-1.292,1.216-1.805,1.938C31.13,94.369,13.393,127.242,5.158,163.682 c-0.08,0.299-0.146,0.601-0.198,0.906C1.722,179.219,0,194.412,0,210.002c0,15.591,1.722,30.784,4.961,45.415 c0.052,0.303,0.117,0.604,0.197,0.901c8.235,36.441,25.972,69.315,50.461,95.881c0.512,0.72,1.116,1.371,1.801,1.935 c26.577,28.119,60.816,48.918,99.344,59.021c0.251,0.078,0.504,0.148,0.761,0.206c16.777,4.331,34.359,6.637,52.47,6.637 c18.116,0,35.703-2.306,52.484-6.64c0.255-0.058,0.507-0.127,0.757-0.205c38.527-10.104,72.765-30.901,99.342-59.018 c0.685-0.564,1.289-1.215,1.801-1.935c24.49-26.566,42.228-59.44,50.464-95.881c0.08-0.3,0.146-0.602,0.198-0.908 c3.238-14.629,4.96-29.82,4.96-45.409C420,194.416,418.279,179.227,415.042,164.6z M281.929,385.842 c4.383-7.57,8.923-15.31,13.675-23.311c10.311-0.758,20.7-1.664,31.103-2.707C313.132,370.421,298.084,379.21,281.929,385.842z M295.529,342.478c-9.292-17.838-19.979-37.53-32.505-59.886c9.273-15.89,18.674-31.845,27.801-47.325 c3.015-5.113,6.006-10.191,8.996-15.267h72.843c8.407,13.488,15.462,24.924,21.841,35.401 c-7.583,30.808-22.695,58.683-43.274,81.553C332.664,339.242,313.977,341.097,295.529,342.478z M124.396,362.532 c4.754,8.005,9.296,15.746,13.677,23.314c-16.157-6.633-31.208-15.423-44.785-26.023 C103.696,360.867,114.086,361.773,124.396,362.532z M124.472,342.477c-18.439-1.379-37.127-3.234-55.704-5.524 c-20.578-22.869-35.689-50.744-43.271-81.552c6.368-10.459,13.423-21.895,21.841-35.401h72.843 c2.993,5.081,5.988,10.165,9.005,15.282c9.124,15.475,18.523,31.424,27.792,47.309 C144.455,304.941,133.767,324.633,124.472,342.477z M138.073,34.155c-4.382,7.568-8.923,15.309-13.677,23.314 c-10.311,0.759-20.7,1.664-31.106,2.708C106.866,49.578,121.916,40.788,138.073,34.155z M124.471,77.523 c9.298,17.85,19.988,37.544,32.508,59.89c-9.268,15.883-18.672,31.831-27.795,47.305c-3.014,5.111-6.018,10.206-9.007,15.282 h-72.84c-8.405-13.485-15.461-24.921-21.841-35.4c7.583-30.808,22.694-58.683,43.272-81.553 C87.34,80.758,106.027,78.903,124.471,77.523z M282.499,210c-2.959,5.024-5.919,10.05-8.902,15.109 c-9.149,15.516-18.574,31.51-27.878,47.456c-23.736,0.339-47.698,0.339-71.435,0c-9.301-15.94-18.723-31.929-27.869-47.441 c-2.986-5.065-5.95-10.095-8.912-15.124c2.962-5.03,5.925-10.06,8.912-15.124c9.146-15.512,18.568-31.5,27.869-47.441 c23.736-0.339,47.699-0.339,71.435,0c9.305,15.946,18.73,31.939,27.878,47.456C276.579,199.951,279.539,204.976,282.499,210z M30.003,210c-3.333,5.349-6.45,10.37-9.4,15.141C20.208,220.145,20,215.098,20,210.002c0-5.097,0.208-10.145,0.604-15.142 C23.555,199.633,26.672,204.654,30.003,210z M389.998,210c3.331-5.345,6.448-10.366,9.399-15.14 c0.396,4.997,0.604,10.045,0.604,15.142c0,5.095-0.208,10.142-0.603,15.137C396.446,220.367,393.329,215.346,389.998,210z M372.664,200h-72.841c-2.986-5.071-5.988-10.161-8.999-15.267c-9.125-15.477-18.533-31.432-27.804-47.32 c12.525-22.353,23.213-42.046,32.508-59.89c18.443,1.38,37.13,3.234,55.7,5.523c20.58,22.87,35.692,50.746,43.275,81.554 C388.122,175.081,381.067,186.517,372.664,200z M295.604,57.469c-4.753-8.004-9.294-15.744-13.675-23.31 c16.154,6.632,31.202,15.421,44.776,26.018C316.302,59.133,305.914,58.227,295.604,57.469z M278.248,67.406 c-9.277,17.838-19.981,37.57-32.561,60.027c-23.717-0.336-47.656-0.336-71.373,0c-12.577-22.45-23.28-42.183-32.561-60.027 c8.79-14.804,16.87-28.734,24.552-42.325c14.033-3.315,28.659-5.078,43.691-5.078c15.036,0,29.666,1.764,43.702,5.08 C261.378,38.672,269.458,52.601,278.248,67.406z M166.304,394.919c-7.682-13.59-15.762-27.52-24.552-42.325 c9.276-17.835,19.976-37.561,32.551-60.009c23.717,0.336,47.678,0.336,71.393,0c12.58,22.456,23.279,42.181,32.551,60.009 c-8.784,14.795-16.864,28.724-24.551,42.323c-14.037,3.317-28.667,5.08-43.702,5.08 C194.963,399.997,180.337,398.234,166.304,394.919z"></path> </g> </g></svg>
+          </div>
+          <div class="text-center w-1/3 text-2xl font-semibold">
+            FOOTBALL
+          </div>
+          <div class="flex items-center justify-center w-1/3">
+            <svg class="stroke-1 hover:stroke-2" width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+              <g data-name="19-Arrow Right">
+                <path d="M16 0a16 16 0 1 0 16 16A16 16 0 0 0 16 0zm0 30a14 14 0 1 1 14-14 14 14 0 0 1-14 14z"/>
+                <path d="m26.71 15.29-7-7-1.42 1.42 5.3 5.29H5v2h18.59l-5.29 5.29 1.41 1.41 7-7a1 1 0 0 0 0-1.41z"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
+
+
+
+
+
+    <!--this is the second row-->
+  <div class="grid grid-cols-2 items-center p-1 ">
+    <!--this is the first div in the same row-->
+      <div class="items-center p-1 gap-x-4">
+        <div class="button-color flex items-center justify-between rounded-xl border-2 border-black min-h-32 p-5">
+          <div class="flex items-center justify-center w-1/3">
+            <svg class="stroke-1 hover:stroke-2" width="50" height="50" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#231F20" d="M54.627,9.373c-12.496-12.495-32.758-12.495-45.254,0c-12.497,12.496-12.497,32.758,0,45.255 c12.496,12.496,32.758,12.496,45.254,0C67.124,42.131,67.124,21.869,54.627,9.373z M53.213,10.787 c4.428,4.428,7.179,9.895,8.261,15.615c-9.549-0.729-19.344,2.539-26.646,9.84c-1.283,1.283-2.437,2.646-3.471,4.066 c-2.487-1.862-4.873-3.926-7.136-6.188c-0.568-0.568-1.106-1.156-1.648-1.74c1.785-2.346,3.748-4.602,5.892-6.744 c7.077-7.078,15.369-12.184,24.198-15.373C52.847,10.438,53.033,10.606,53.213,10.787z M50.973,8.76 c-8.719,3.308-16.901,8.44-23.922,15.462c-2.117,2.117-4.065,4.34-5.845,6.65c-2.224-2.542-4.227-5.21-5.993-7.985 c4.333-5.684,6.633-12.416,6.904-19.218C31.742,0.319,42.732,2.016,50.973,8.76z M10.787,10.787 c2.755-2.756,5.915-4.854,9.285-6.312c-0.395,5.848-2.387,11.605-5.978,16.566c-1.728-2.922-3.208-5.945-4.448-9.047 C10.014,11.585,10.393,11.182,10.787,10.787z M8.193,13.755c1.291,3.084,2.818,6.087,4.582,8.989 c-0.625,0.75-1.285,1.481-1.988,2.185c-2.626,2.626-5.599,4.687-8.766,6.208C2.196,24.985,4.254,18.882,8.193,13.755z M2.031,33.34 c3.688-1.646,7.145-3.972,10.17-6.996c0.588-0.589,1.142-1.199,1.678-1.819c1.809,2.778,3.848,5.447,6.104,7.993 c-4.463,6.175-7.752,12.933-9.889,19.967C5.03,47.076,2.34,40.253,2.031,33.34z M11.712,54.093 c2.021-7.069,5.231-13.87,9.654-20.074c0.479,0.507,0.945,1.021,1.441,1.517c2.351,2.352,4.832,4.487,7.419,6.422 c-3.73,5.818-5.498,12.526-5.329,19.193C20.114,59.99,15.563,57.635,11.712,54.093z M53.213,53.213 c-7.156,7.157-17.028,9.934-26.299,8.347c-0.253-6.388,1.382-12.835,4.933-18.423c6.625,4.654,13.896,7.979,21.445,9.994 C53.265,53.157,53.24,53.187,53.213,53.213z M32.979,41.482c0.974-1.337,2.057-2.619,3.263-3.826 c6.99-6.989,16.407-10.049,25.538-9.219c0.961,8.076-1.356,16.463-6.953,23.016C47.13,49.531,39.712,46.213,32.979,41.482z"></path> </g></svg>
+          </div>  
+          <div class="text-center w-1/3 text-2xl font-semibold">
+            BASKETBALL
+          </div>
+          <div class="flex items-center justify-center w-1/3">
+            <svg class="stroke-1 hover:stroke-2" width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+              <g data-name="19-Arrow Right">
+                <path d="M16 0a16 16 0 1 0 16 16A16 16 0 0 0 16 0zm0 30a14 14 0 1 1 14-14 14 14 0 0 1-14 14z"/>
+                <path d="m26.71 15.29-7-7-1.42 1.42 5.3 5.29H5v2h18.59l-5.29 5.29 1.41 1.41 7-7a1 1 0 0 0 0-1.41z"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!--this is the second div in the same row-->
+      <div class="items-center p-5 gap-x-4">
+        <div class="button-color flex items-center justify-between rounded-xl border-2 border-black min-h-32 p-5">
+          <div class="flex items-center justify-center w-1/3">
+            <svg class="stroke-1 hover:stroke-2" width="50" height="50" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="16" height="16" id="icon-bound" fill="none"></rect> <path d="M2.009,0H1.991C1.444,0,1,0.444,1,0.991V16h2V0.991C3,0.444,2.556,0,2.009,0z M16,1H4v8h12l-4-4L16,1z"></path> </g></svg>
+          </div>
+          <div class="text-center w-1/3 text-2xl font-semibold">
+            KHO KHO
+          </div>
+          <div class="flex items-center justify-center w-1/3">
+            <svg class="stroke-1 hover:stroke-2" width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+              <g data-name="19-Arrow Right">
+                <path d="M16 0a16 16 0 1 0 16 16A16 16 0 0 0 16 0zm0 30a14 14 0 1 1 14-14 14 14 0 0 1-14 14z"/>
+                <path d="m26.71 15.29-7-7-1.42 1.42 5.3 5.29H5v2h18.59l-5.29 5.29 1.41 1.41 7-7a1 1 0 0 0 0-1.41z"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  </h1>
+
+
+
+
+
+    <!--this is the third row-->
+  <div class="grid grid-cols-2 items-center p-1 ">
+    <!--this is the first div in the same row-->
+      <div class="items-center p-1 gap-x-4">
+        <div class="button-color flex items-center justify-between rounded-xl border-2 border-black min-h-32 p-5">
+          <div class="flex items-center justify-center w-1/3">
+            <svg class="stroke-1 hover:stroke-2" width="60" height="60" viewBox="0 0 64 64" id="SVGRoot" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title id="title7560"></title> <defs id="defs7542"></defs> <g id="layer1"> <path d="m 31.5,8 v 48 h 1 V 8 Z" id="path2033" style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke-width:0.00064;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"></path> <path d="m 16,15.5 v 1 c 0,0 0.405043,-0.0043 1.091797,0.224609 0.686754,0.228919 1.613613,0.687832 2.554687,1.628907 C 21.528633,20.235665 23.5,24.083333 23.5,32 c 0,7.916668 -1.971367,11.764335 -3.853516,13.646484 -0.941074,0.941075 -1.867933,1.399988 -2.554687,1.628907 C 16.405043,47.504309 16,47.5 16,47.5 v 1 c 0,0 0.594958,-0.0043 1.408203,-0.275391 0.813246,-0.271082 1.886387,-0.812168 2.945313,-1.871093 C 22.471366,44.235664 24.5,40.083334 24.5,32 24.5,23.916666 22.471366,19.764336 20.353516,17.646484 19.29459,16.587559 18.221449,16.046472 17.408203,15.775391 16.594958,15.504309 16,15.5 16,15.5 Z" id="path2035" style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke-width:0.00064;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"></path> <path d="m 48.5,15.5 c 0,0 -0.594957,0.0043 -1.408203,0.275391 -0.813246,0.271081 -1.886386,0.812168 -2.945313,1.871093 C 42.028631,19.764336 40,23.916666 40,32 c 0,8.083334 2.028631,12.235664 4.146484,14.353516 1.058927,1.058925 2.132067,1.600012 2.945313,1.871093 C 47.905043,48.495691 48.5,48.5 48.5,48.5 v -1 c 0,0 -0.405042,0.0043 -1.091797,-0.224609 C 46.721448,47.046472 45.794591,46.587559 44.853516,45.646484 42.971365,43.764335 41,39.916668 41,32 41,24.083333 42.971365,20.235665 44.853516,18.353516 45.794591,17.412441 46.721448,16.953528 47.408203,16.724609 48.094958,16.495691 48.5,16.5 48.5,16.5 Z" id="path2037" style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke-width:0.00064;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"></path> <path d="M 32,7.5 C 18.474946,7.5 7.5,18.474946 7.5,32 7.5,45.525054 18.474946,56.5 32,56.5 45.525054,56.5 56.5,45.525054 56.5,32 56.5,18.474946 45.525054,7.5 32,7.5 Z m 0,1 C 44.984614,8.5 55.5,19.015386 55.5,32 55.5,44.984614 44.984614,55.5 32,55.5 19.015386,55.5 8.5,44.984614 8.5,32 8.5,19.015386 19.015386,8.5 32,8.5 Z" id="path2031" style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke-width:0.00064;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"></path> </g> </g></svg>
+          </div>  
+          <div class="text-center w-1/3 text-2xl font-semibold">
+            THROWBALL
+          </div>
+          <div class="flex items-center justify-center w-1/3">
+            <svg class="stroke-1 hover:stroke-2" width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+              <g data-name="19-Arrow Right">
+                <path d="M16 0a16 16 0 1 0 16 16A16 16 0 0 0 16 0zm0 30a14 14 0 1 1 14-14 14 14 0 0 1-14 14z"/>
+                <path d="m26.71 15.29-7-7-1.42 1.42 5.3 5.29H5v2h18.59l-5.29 5.29 1.41 1.41 7-7a1 1 0 0 0 0-1.41z"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!--this is the second div in the same row-->
+      <div class="items-center p-5 gap-x-4">
+        <div class="button-color flex items-center justify-between rounded-xl border-2 border-black min-h-32 p-5">
+          <div class="flex items-center justify-center w-1/3">
+            <svg class="stroke-1 hover:stroke-2" width="50" height="50" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M12,0A11.916,11.916,0,0,0,6,1.621a.976.976,0,0,0-.131.08A11.975,11.975,0,1,0,12,0Zm9.022,16.285A16.256,16.256,0,0,1,9.8,15.69a9.961,9.961,0,0,1,2.369-2.55,11.972,11.972,0,0,0,4.448.873,12.071,12.071,0,0,0,5.348-1.25A9.906,9.906,0,0,1,21.022,16.285Zm.853-5.782a9.988,9.988,0,0,1-2.938,1.231A18.2,18.2,0,0,0,15.868,2.78,10.017,10.017,0,0,1,21.875,10.5ZM12.749,2.038a16.227,16.227,0,0,1,4.2,9.949,9.969,9.969,0,0,1-4-.69A12.031,12.031,0,0,0,8.5,2.646,9.922,9.922,0,0,1,12,2C12.253,2,12.5,2.019,12.749,2.038ZM6.487,3.665A10.018,10.018,0,0,1,8.942,5.931a18.253,18.253,0,0,0-6.708,8.2A9.957,9.957,0,0,1,6.487,3.665ZM3.356,17.005A16.261,16.261,0,0,1,9.976,7.65a9.954,9.954,0,0,1,.993,3.891,12.033,12.033,0,0,0-4.715,8.63A10.057,10.057,0,0,1,3.356,17.005ZM12,22a9.948,9.948,0,0,1-3.772-.744A9.983,9.983,0,0,1,8.9,17.481,17.9,17.9,0,0,0,19.375,18.73,9.963,9.963,0,0,1,12,22Z"></path></g></svg>
+          </div>
+          <div class="text-center w-1/3 text-2xl font-semibold">
+            VOLLEYBALL
+          </div>
+          <div class="flex items-center justify-center w-1/3">
+            <svg class="stroke-1 hover:stroke-2" width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+              <g data-name="19-Arrow Right">
+                <path d="M16 0a16 16 0 1 0 16 16A16 16 0 0 0 16 0zm0 30a14 14 0 1 1 14-14 14 14 0 0 1-14 14z"/>
+                <path d="m26.71 15.29-7-7-1.42 1.42 5.3 5.29H5v2h18.59l-5.29 5.29 1.41 1.41 7-7a1 1 0 0 0 0-1.41z"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    
 </body>
 </html>
