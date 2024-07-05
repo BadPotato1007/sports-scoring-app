@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template, request
 app = Flask(__name__)
 @app.route("/")
 def Home():
@@ -9,5 +9,16 @@ def Teams():
 @app.route("/choose")
 def Choose():
     return render_template("choose.html")
+@app.route("/choose",methods=["POST"])
+def sport_select():
+    text = request.form['text']
+    processed_text = text.upper()
+    return processed_text
+
+
+
 if "__main__" == __name__:
     app.run(debug=True)
+
+
+
