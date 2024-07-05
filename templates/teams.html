@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.1/flowbite.js" integrity="sha512-HoR86EEia6LhUfMMFBzFB+nWZeEpYdYcpU4qe0SIEvqj1nqoaQniIyfxkwfGZ8fO5NFwMEL3cjdc0pVb8FHHfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -15,62 +16,78 @@
       font-style: bold;
 
     }
+    .table{
+      background-color: ;
+    }
+    .row-1{
+      background-color: ;
+    }
 
   </style>
 </head>
 <body >
-    <form>
-        <div class="space-y-12 space-x-12 ">
-          <div class="border-b border-gray-900/10 pb-12 ">
+  <div class="mt-10">
+    <div><h1>Team-1</h1></div>
+    <div class="flex justify-start p-3.5 pr-10  mt-10">
+      <input type="text" id="team_1_tb" class="rounded-2xl  text-black text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg--700 dark:border--600 dark:placeholder--400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required />
+      <button id="Add-Player-Btn" onclick="Addplayer_team1()" class="rounded-2xl ml-10 w-1/5	bg-blue-500">Add Player</button>
+    </div>
+    
+
+<div class="relative m-5 overflow-x-auto  sm:rounded-lg">
+  <table class="w-full table text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase ">
+          <tr class=" row-1 border-b dark:border-gray-700">
+              <th scope="col" class="px-6 py-3">
+                  Player Name 
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Action
+              </th>
+          </tr>
+      </thead>
+      <tbody id="team_1_table">
+      </tbody>
+  </table>
+</div>
+
+  </div>
+    </body>
+
+  <script>
+    team_1_players = []
+    const add_player_btn = document.getElementById("Add-Player-Btn")
+    function Addplayer_team1(){
+      player_name = document.getElementById("team_1_tb").value
+      team_1_players.push(player_name)
+      render_table("team_1_table")
+    }
+    function remove_player(id){
+      player_name_rem = id.innerText
+      const index_del = team_1_players.indexOf(player_name_rem)
+      team_1_players.pop(index_del)
+      console.log(team_1_players)
+      render_table("team_1_table")
       
-            <div class="mt-10 grid grid-cols-1">
-              <div class="sm:col-span-4">
-                <label for="username" class="block text-lg  leading-6 text-gray-900 pl-10">Team 1</label>
-              <!-- this is the div containing the text box and the button-->
-                <div class="mt-2 pl-10 grid grid-cols-2 gap-10">
-                  <div class=" sm:col-span-4  flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 max-w-max">
-                    <input type="text" name="username" id="username" autocomplete="username" class="block flex-1 border-0 py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith">
-                  </div>
 
-                  <div class="pl-10 col-start-2 sm:col-span-4 ">
-                    <button type="button" class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>              
-            </div>
-          </div>
-          </div>
-      </form>
-      <form>
-        <div class="space-y-12 space-x-12 ">
-          <div class="border-b border-gray-900/10 pb-12">
-      
-            <div class="mt-10 grid grid-cols-1">
-              <div class="sm:col-span-4">
-                <label for="username" class="block text-lg  leading-6 text-gray-900 pl-10">Team 2</label>
-              <!-- this is the div containig the text box and the button-->
-                <div class="mt-2 pl-10 grid grid-cols-2 gap-10">
-                  <div class=" sm:col-span-4  flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 max-w-max">
-                    <input type="text" name="username" id="username" autocomplete="username" class="block flex-1 border-0 py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith">
-                  </div>
+    }
 
-                  <div class="pl-10 col-start-2 sm:col-span-4 ">
-                    <button type="button" class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>              
-            </div>
-          </div>
-          </div>
-      </form>
 
-</body>
-</html>
+    function render_table(team){
+      table = document.getElementById(team)
+      table.innerHTML = ""
+      for(let i=0;i!=team_1_players.length;i++){
+        table.innerHTML += `<tr class="  border-b dark:border-gray-700">
+              <th scope="row" id="team_1_${i}" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black">
+              ${team_1_players[i]}
+              </th>
+              
+              <td  class="px-6 py-4">
+                <a href="#"  onclick="remove_player(team_1_${i})" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Remove</a>
+            </td>
+          </tr>`
+      }
+
+    }
+
+  </script>
