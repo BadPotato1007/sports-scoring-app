@@ -14,6 +14,9 @@ def sport_select():
     text = request.form['text']
     processed_text = text.upper()
     return processed_text
+@app.route("/cricket/score")
+def cricket_scoreing_page():
+    return render_template("cricket_scoring_page.html")
 
 
 
