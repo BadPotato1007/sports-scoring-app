@@ -10,10 +10,10 @@ from firebase_admin import firestore
 # doc_ref.set({"first": "Ada", "last": "Lovelace", "born": 1815})
 
 app = Flask(__name__)
-@app.route('/')
-def index():
-    res = flask.make_response()
-    res.set_cookie("name", value="I am cookie")
+# @app.route('/')
+# def index():
+#     res = flask.make_response()
+#     res.set_cookie("name", value="I am cookie")
 
 @app.route("/")
 def Home():
@@ -40,7 +40,7 @@ def Cricket():
 
 
 if "__main__" == __name__:
-    app.run(debug=True)
+    app.run(debug=True,host="0.0.0.0")
 
 
 

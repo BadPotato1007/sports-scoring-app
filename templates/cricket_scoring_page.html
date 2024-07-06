@@ -8,14 +8,80 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+<style>
+  .box-styles {
+    background-color: #ffffff;
+  }
+  .inform-box-sytles {
+    background-color: #eaebed;
+  }
+</style>
 <body>
-    <div class="grid grid-cols-1 md:grid-cols-2">
-        <div class="bg-blue-200 p-4">Top Half</div>
-        <div class="bg-green-200 p-4">Bottom Half</div>
+<div class="sm:visible invisible grid grid-rows-1 md:grid-rows-2">
+    <div class="m-3 bg-green-200 flex flex-row sm:flex-row  rounded-lg content-center p-4">
+        <div class="h-20 w-3/5  inform-box-sytles flex rounded-lg items-center font-bold justify-center mx-2">Runs</div> 
+       
+            <div class="h-20 sm:h-20 box-styles flex rounded-lg items-center font-bold justify-center w-1/5 sm:w-3/5 mx-2">0</div>
+            <div class="h-20 box-styles flex rounded-lg items-center font-bold justify-center w-1/5 sm:w-3/5 mx-2">1</div>
+            <div class="h-20 box-styles flex rounded-lg items-center font-bold justify-center w-3/5 mx-2">2</div>
+            <div class="h-20 box-styles flex rounded-lg items-center   font-bold justify-center w-3/5 mx-2">3</div>
+            <div class="h-20 box-styles flex rounded-lg items-center  font-bold justify-center w-3/5 mx-2">5</div>
+            <div class="h-20 box-styles flex rounded-lg items-center font-bold justify-center w-3/5 mx-2">7</div>
+            <div class="h-20 box-styles flex rounded-lg items-center bg-green-500 font-bold justify-center w-3/5 mx-2">Custom</div>
+        </div>
+
+        <div class="flex flex-row sm:visible invisible  md:hidden md:flex flex-row w-4/5 justify-start items-center">
+            <div class="h-10 sm:h-20 box-styles flex rounded-lg items-center font-bold justify-center w-1/5 sm:w-3/5 mx-2">0</div>
+            <div class="h-20 box-styles flex rounded-lg items-center font-bold justify-center w-1/5 sm:w-3/5 mx-2">3</div>
+            <div class="h-20 box-styles flex rounded-lg items-center font-bold justify-center w-3/5 mx-2">2</div>
+            <div class="h-20 box-styles flex rounded-lg items-center font-bold justify-center w-3/5 mx-2">4</div>
+            <div class="h-20 box-styles flex rounded-lg items-center font-bold justify-center w-3/5 mx-2">5</div>
+            <div class="h-20 box-styles flex rounded-lg items-center font-bold justify-center w-3/5 mx-2">6</div>
+            <div class="h-20 box-styles flex rounded-lg items-center font-bold justify-center w-3/5 mx-2">7</div>
+        </div>
+        
+        
     </div>
-      
+    
+</div>
+
+
+<div class="sm:invisible visible  grid grid-rows-1 ">
+    <div class="m-3 bg-green-200 flex flex-row   rounded-lg ">
+        <div class="h-30 w-1/5 m-4 inform-box-sytles flex rounded-lg items-start font-bold justify-center mx-2">Runs</div> 
+        <div class="grid-cols-7	 w-4/5  font-bold  ">
+            <div class="flex p-1">
+                <div class="h-10 box-styles flex rounded-lg items-center font-bold justify-center w-3/5 mx-2">1</div>
+                <div class="h-10 box-styles flex rounded-lg items-center font-bold justify-center w-3/5 mx-2">2</div>            
+            </div>
+            <div class="flex p-1">
+                <div class="h-10 box-styles flex rounded-lg items-center font-bold justify-center w-3/5 mx-2">3</div>
+                <div class="h-10 box-styles flex rounded-lg items-center font-bold justify-center w-3/5 mx-2">5</div>            
+            </div>
+            <div class="flex p-1">
+                <div class="h-10 box-styles flex rounded-lg items-center font-bold justify-center w-3/5 mx-2">7</div>
+                <div class="h-10 box-styles flex rounded-lg items-center bg-green-500 font-bold justify-center w-3/5 mx-2">Custom</div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="m-3 bg-green-200 flex flex-row   rounded-lg ">
+        <div class="h-30 w-2/5 m-4 inform-box-sytles flex rounded-lg items-start font-bold justify-center mx-2">Boundaries</div> 
+        <div class="grid-cols-7	 w-4/5  font-bold  ">
+            <div class="flex p-1">
+                <div class="h-10 box-styles flex rounded-lg items-center font-bold justify-center w-3/5 mx-2">4</div>
+                <div class="h-10 box-styles flex rounded-lg items-center font-bold justify-center w-3/5 mx-2">6</div>            
+            </div>
+            <div class="flex p-1">
+                <div class="h-10 box-styles flex rounded-lg items-center bg-green-500 font-bold justify-center w-full mx-2">Custom</div>
+            </div>
+        </div>
+        
+    </div>
+</div>
 
 </body>
+</html>
