@@ -15,6 +15,8 @@ app = Flask(__name__)
 #     res = flask.make_response()
 #     res.set_cookie("name", value="I am cookie")
 
+
+
 @app.route("/")
 def Home():
     return render_template("home_page.html")
