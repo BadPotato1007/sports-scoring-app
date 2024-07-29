@@ -29,15 +29,18 @@
       text-align: left;
       padding-left: 2%;
     }
+    modal-class{
+      background-color: #FFEEA9;
+    }
 
 
   </style>
 </head>
 <body >
   <div class="mt-10">
-    <div><h1>TEAM 1</h1></div>
+    <div><h1 id="team-1-name">TEAM 1</h1></div>
     <div class="flex justify-start p-3.5 pr-10  mt-10">
-      <input type="text" id="team_1_tb" class="rounded-2xl  text-black text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg--700 dark:border--600 dark:placeholder--400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required />
+      <input type="text" id="team_1_tb" class="rounded-2xl  text-black text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg--700 dark:border--600 dark:placeholder--400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Player Name" required />
       <button id="Add-Player-Btn" onclick="Addplayer_team1()" class="rounded-2xl ml-10 w-1/5	bg-blue-500">Add Player</button>
     </div>
     
@@ -63,7 +66,7 @@
 
 
   <div class="mt-10">
-    <div><h1 class="">Team-2</h1></div>
+    <div><h1 id="team-2-name">Team-2</h1></div>
     <div class="flex justify-start p-3.5 pr-10  mt-10">
       <input type="text" id="team_2_tb" class="rounded-2xl  text-black text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg--700 dark:border--600 dark:placeholder--400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Player Name" required />
       <button id="Add-Player-Btn" onclick="Addplayer_team2()" class="rounded-2xl ml-10 w-1/5	bg-blue-500">Add Player</button>
@@ -86,11 +89,61 @@
       </tbody>
   </table>
 </div>
+<button class="h-10 box-styles flex rounded-lg items-center bg-green-500 font-bold justify-center w-full mx-2" id="teams-next" onclick="openTossModal()">Next</button>
+
+<div id="toss-modal" class="fixed inset-0 flex items-center justify-center z-10 hidden">
+
+            <div id="toss-modal-div" class="bg-yellow-200 modal-class p-6 rounded-2xl shadow-lg">
+                
+                
+            </div>
+        </div>
+
 
 
 
   </div>
     </body>
+
+  <script>
+    function openTossModal() {
+            toss_modal_div = document.getElementById("toss-modal-div")
+            document.getElementById('teams-next').textContent = 'Loading..';
+            team_1_name = document.getElementById('team-1-name').textContent
+            team_2_name = document.getElementById('team-2-name').textContent
+            document.getElementById('toss-modal').classList.remove('hidden')
+
+            content = 
+            `
+            <div class="space-y-4">
+              <h2 class="text-xl rounded-lg font-semibold mb-4">Please Sleect the Batting Team</h2>
+                  <button
+                      class="bg-yellow-300 hover:bg-yellow-400 text-gray-800 font-bold py-4 px-6 rounded-full w-full focus:outline-none"
+                  >
+                      ${team_1_name}
+                  </button>
+                  <button
+                      class="bg-green-300 hover:bg-green-400 text-gray-800 font-bold py-4 px-6 rounded-full w-full focus:outline-none"
+                  >
+                      ${team_2_name}
+                  </button>
+              </div>
+              <div class="flex">
+
+                <button
+                  class="mt-6 mr-6 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full w-full focus:outline-none"
+                  onclick="closeCoinTossModal()">Back</button>
+              <button class="mt-6  bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full w-full focus:outline-none"onclick="closeCoinTossModal()">Next</button>
+              </div>
+          </div>
+            `
+            toss_modal_div.innerHTML = content
+        }
+
+        function closeTossModal() {
+            document.getElementById('toss-modal').classList.add('hidden');
+        }
+  </script>
 
   <script>
     team_1_players = []
