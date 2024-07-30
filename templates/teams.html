@@ -89,7 +89,57 @@
       </tbody>
   </table>
 </div>
-<button class="h-10 box-styles flex rounded-lg items-center bg-green-500 font-bold justify-center w-full mx-2" id="teams-next" onclick="openTossModal()">Next</button>
+<button class="h-10 box-styles flex rounded-lg items-center bg-green-500 font-bold justify-center w-full mx-2"  id="teams-next" onclick="openTossModal()">Next</button>
+
+
+
+<div id="myModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 modal-class hidden items-center justify-center">
+  <div class="bg-yellow-200 rounded-lg w-3/4 md:w-1/2 p-5">
+      <div class="flex border-b-4 border-black justify-between items-center">
+          <h2 class="text-xl font-bold">Player List</h2>
+          <button id="closeModalBtn" class="text-red-500">&times;</button>
+      </div>
+      <div class="mt-4">
+          <h3 id="final_preview_team_1" class="text-lg font-semibold">Team A</h3>
+          <table id="Final_check_team_list_team_1" class="min-w-full bg-yellow-400 border border-white-500 mt-2">
+              <thead>
+                  <tr>
+                      <th class="py-2 px-4 border-b">Players</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td class="py-2 px-4 border-b">Player 1</td>
+                  </tr>
+                  <tr>
+                      <td class="py-2 px-4 border-b">Player 2</td>
+                  </tr>
+                  <!-- Add more players as needed -->
+              </tbody>
+          </table>
+      </div>
+      <div class="mt-4">
+          <h3 id="final_preview_team_2" class="text-lg font-semibold">Team B</h3>
+          <table class="min-w-full bg-yellow-400 border border-black-200 mt-2">
+              <thead>
+                  <tr>
+                      <th class="py-2 px-4 border-b">Players</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td class="py-2 px-4 border-b">Player 3</td>
+                  </tr>
+                  <tr>
+                      <td class="py-2 px-4 border-b">Player 4</td>
+                  </tr>
+                  <!-- Add more players as needed -->
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>
+
 
 <div id="toss-modal" class="fixed inset-0 flex items-center justify-center z-10 hidden">
 
@@ -106,7 +156,46 @@
     </body>
 
   <script>
+    function open_final_modal(){
+      closeTossModal()
+      console.log("Opening final modal")
+      document.getElementById("myModal").classList.remove("hidden")
+      Load_Final_Team_List()
+    }
+
+    function Load_Final_Team_List(){
+      team_1_name = document.getElementById("team-1-name").textContent
+      team_2_name = document.getElementById("team-2-name").textContent
+
+      document.getElementById("final_preview_team_1").textContent = team_1_name
+      document.getElementById("final_preview_team_2").textContent = team_2_name
+
+
+
+      final_table_1 = document.getElementById("Final_check_team_list_team_1")
+      
+      for(i=0;i!=team_1_players.length;i++){
+        content = `
+      <tr>
+        <td class="py-2 px-4 border-b">${team_1_players[i]}</td>
+      </tr>
+      `
+        final_table_1.innerHTML += content
+      }
+     
+
+    }
+    function focus_element(focus_element_id,unfocus_element_id){
+      console.log("Focus element",focus_element_id)
+      const element_to_focus = document.getElementById(focus_element_id)
+      const element_to_unfocus = document.getElementById(unfocus_element_id)
+      element_to_focus.classList.add('outline')
+      element_to_focus.classList.add('outline-offset-2')
+      element_to_unfocus.classList.remove('outline')
+      element_to_unfocus.classList.remove('outline-offset-2')
+    }
     function openTossModal() {
+
             toss_modal_div = document.getElementById("toss-modal-div")
             document.getElementById('teams-next').textContent = 'Loading..';
             team_1_name = document.getElementById('team-1-name').textContent
@@ -116,14 +205,19 @@
             content = 
             `
             <div class="space-y-4">
-              <h2 class="text-xl rounded-lg font-semibold mb-4">Please Sleect the Batting Team</h2>
-                  <button
-                      class="bg-yellow-300 hover:bg-yellow-400 text-gray-800 font-bold py-4 px-6 rounded-full w-full focus:outline-none"
+              <h2 class="text-xl rounded-lg font-semibold mb-4">Please Select the Batting Team</h2>
+                  <button 
+                  onclick="focus_element('team-1-toss','team-2-toss')"
+                  id="team-1-toss"
+                      class="bg-yellow-300  focus:ring-blue-300 hover:bg-yellow-400 text-gray-800 font-bold py-4 px-6 rounded-full w-full"
                   >
                       ${team_1_name}
                   </button>
+
                   <button
-                      class="bg-green-300 hover:bg-green-400 text-gray-800 font-bold py-4 px-6 rounded-full w-full focus:outline-none"
+                  id="team-2-toss"
+                  onclick="focus_element('team-2-toss','team-1-toss')"
+                      class="bg-green-300  hover:bg-green-400 text-gray-800 font-bold py-4 px-6 rounded-full w-full "
                   >
                       ${team_2_name}
                   </button>
@@ -132,8 +226,8 @@
 
                 <button
                   class="mt-6 mr-6 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full w-full focus:outline-none"
-                  onclick="closeCoinTossModal()">Back</button>
-              <button class="mt-6  bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full w-full focus:outline-none"onclick="closeCoinTossModal()">Next</button>
+                  onclick="closeTossModal()">Back</button>
+              <button onclick="open_final_modal()" class="mt-6  bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full w-full focus:outline-none" >Next</button>
               </div>
           </div>
             `
@@ -142,6 +236,7 @@
 
         function closeTossModal() {
             document.getElementById('toss-modal').classList.add('hidden');
+            document.getElementById('teams-next').textContent = 'Next';
         }
   </script>
 
